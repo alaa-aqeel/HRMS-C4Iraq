@@ -94,7 +94,7 @@ export default{
     methods:{
         projects(){
             this.datas = 'load'
-            axios.get("api/member/project/",{
+            axios.get("api/member/project",{
                 headers:{Authorization:`Bearer ${this.token}`}
             }).then((resp)=>{
                 if(resp.data.Errors){ this.datas = null; }
@@ -103,7 +103,7 @@ export default{
             // .catch((resp)=>{ this. })
         },
         add(data){
-            axios.post("api/member/project/",data,
+            axios.post("api/member/project",data,
                 {headers:{Authorization:`Bearer ${this.token}`}}
             ).then((resp)=>{
                 this.fab = false ;

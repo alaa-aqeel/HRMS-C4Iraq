@@ -74,7 +74,7 @@
                         this.alert = true ;
                         this.alert_type = 'error' ;
                         this.alert_text = 'Error Login E-mail/Password not courrect';
-                        console.log(resp.response);
+                        
                     })
                 }
             }

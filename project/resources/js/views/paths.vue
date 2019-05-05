@@ -29,7 +29,6 @@ export default {
             .then(resp=>{
                 if(resp.data.Success){
                     this.data = resp.data.Success
-                    console.log(resp);
                 }
                
             })

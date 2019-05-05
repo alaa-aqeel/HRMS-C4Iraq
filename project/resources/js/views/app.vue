@@ -53,16 +53,14 @@ export default{
             this.isActive();
         },
         isActive(){
-            // console.log(this.dataLogin.token);
-            console.log("isAcrive setp");
-            axios.get("api/member/", {headers:{Authorization:`Bearer ${this.dataLogin.token}`}} )
+            axios.get("api/member", {headers:{Authorization:`Bearer ${this.dataLogin.token}`}} )
             .then((resp)=>{
                 if( resp.data.Errors == "not_active" ){
                     this.snackbar = true;
                 } 
                 this.user = resp.data.user;
             }).catch(resp=>{this.logout();})
-            
+
         },
         logout(){ 
             this.user = {};

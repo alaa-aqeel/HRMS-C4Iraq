@@ -14,7 +14,6 @@ import Paths  from './views/paths.vue';
 import Train  from './views/train.vue';
 
 
-
 const router = new VueRouter({
     mode: 'history',
     routes:[
@@ -39,8 +38,7 @@ router.beforeEach((to,from,next)=>{
     const auth = JSON.parse(localStorage.getItem('Data-User'));
 
     if( to.meta.login  ){
-        console.log("router setp");
-        axios.get("/api/member/", {headers:{Authorization:`Bearer ${auth.token}`}} )
+        axios.get("api/member", {headers:{Authorization:`Bearer ${auth.token}`}} )
         .then((resp)=>{
             if(resp.data.user){               
                 var data = resp.data.user

@@ -41,5 +41,3 @@ const app = new Vue({
    router : router,
    render: h => h(App)
 });
-
-console.log('Start App ..');

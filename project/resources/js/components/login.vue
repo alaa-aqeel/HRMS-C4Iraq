@@ -69,7 +69,6 @@
                             email: this.email,
                             password: this.password
                         }).then((resp)=>{ 
-                            
                             if (resp.data.token){
                                 this.alert = false ;
                                 this.dialog = false;

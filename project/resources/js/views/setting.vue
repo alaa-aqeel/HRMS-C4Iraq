@@ -40,7 +40,6 @@ import Password from "./../components/setting/password.vue";
 
 export default{
     components:{
-        // "path-setting" : Path,
         "password-setting":Password
     },
     props:['user','token'],

@@ -101,7 +101,7 @@ export default{
             this.snackbar = true ;
         },
         isActive(){
-            axios.get("api/member/", {headers:{Authorization:`Bearer ${this.user.tkn}`}} )
+            axios.get("api/member", {headers:{Authorization:`Bearer ${this.user.tkn}`}} )
             .then((resp)=>{
                 if( resp.data.Errors == "not_active" ){
                     this.is_active = false ;
